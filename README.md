@@ -9,3 +9,11 @@ pip install pipenv
 pipenv shell   
 pip install openai
 python .\start.py
+
+
+Generate tests
+generate.py
+
+
+Execute tests
+execute_tests.py

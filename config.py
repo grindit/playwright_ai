@@ -7,6 +7,7 @@ api_key = os.getenv("AZURE_OPENAI_KEY")
 api_version = "2024-02-15-preview"
 test_directory = "generated_tests"
 code_template_file = "templates/template1.js"
+test_cases_definitions_dir = "test_cases_definitions"
 # Initialize the list to keep track of all messages
 messages = []
 
@@ -18,3 +19,10 @@ client = AzureOpenAI(
     api_key=api_key,
     api_version=api_version
 )
+
+temperature=0.7
+max_tokens=800
+top_p=0.95
+frequency_penalty=0
+presence_penalty=0
+stop=None

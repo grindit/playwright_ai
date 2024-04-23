@@ -1,10 +1,10 @@
 const { test, expect } = require('@playwright/test');
 
 // Define the test suite
-test.describe('<Test Name>', () => {
+test.describe('Manual test case', () => {
 
   // Define a test case
-  test('<Test Case Description>', async ({ page }) => {
+  test('Manual test case. As a refference', async ({ page }) => {
 
     // Generate code to open google.com page
     await page.goto('https://www.google.com');

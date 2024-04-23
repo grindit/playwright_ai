@@ -243,3 +243,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+/generated_tests/*.spec.js   
+!/generated_tests/zcontrol_test.spec.js

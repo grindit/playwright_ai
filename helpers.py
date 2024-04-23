@@ -1,21 +1,20 @@
-from config import  client, messages, template_content
-
+import config as cfg
 
 # Function to add a new message and get a response
 def send_message(new_message):
-    messages.append({"role": "user", "content": new_message})
-    completion = client.chat.completions.create(
+    cfg.messages.append({"role": "user", "content": new_message})
+    completion = cfg.client.chat.completions.create(
         model="playwright_ai",
-        messages=messages,
-        temperature=0.7,
-        max_tokens=800,
-        top_p=0.95,
-        frequency_penalty=0,
-        presence_penalty=0,
-        stop=None
+        messages=cfg.messages,
+        temperature=cfg.temperature,
+        max_tokens=cfg.max_tokens,
+        top_p=cfg.top_p,
+        frequency_penalty=cfg.frequency_penalty,
+        presence_penalty=cfg.presence_penalty,
+        stop=cfg.stop
     )
     response = completion.choices[0].message.content
-    messages.append({"role": "system", "content": response})
+    cfg.messages.append({"role": "system", "content": response})
     return response
 
 def generate_playwright_code(prompts):   
@@ -38,7 +37,6 @@ def generate_playwrite_test(prompts):
     for code in generated_code:
         print(code)
 
-    message_text = "Insert" + generated_code_as_string + "into the test template ... " + template_content
-
+    message_text = "Insert" + generated_code_as_string + "into the test template ... " + cfg.template_content
 
     return send_message(message_text)

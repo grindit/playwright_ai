@@ -1,0 +1,7 @@
+Test:
+  Name: "Search test"
+  Description: "Tests that check search functionality"
+  Steps:
+    - "Open google.com page."
+    - "Confirm cookie policy."
+    - "Click on a <textarea> and that search for Playwright text."
