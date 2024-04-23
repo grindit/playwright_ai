@@ -1,4 +1,5 @@
 # playwrite_ai
+This is a sample projest to demonstrate how to use Azure OpenAI to generate automated tests with Playwright.
 
 ## Prerequisites
 Create environmental variable 'AZURE_OPENAI_KEY' with a token to you model
