@@ -21,7 +21,7 @@ client = AzureOpenAI(
 )
 
 #remember to add the model name of your deployed model
-model = "playwright2_ai"
+model = "playwright_ai"
 temperature=0.7
 max_tokens=800
 top_p=0.95
