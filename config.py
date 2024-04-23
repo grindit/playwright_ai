@@ -6,7 +6,7 @@ azure_endpoint = "https://testservicepoc.openai.azure.com/"
 api_key = os.getenv("AZURE_OPENAI_KEY")
 api_version = "2024-02-15-preview"
 test_directory = "generated_tests"
-code_template_file = "templates/template1.js"
+code_template_file = "templates/main_template.js"
 test_cases_definitions_dir = "test_cases_definitions"
 # Initialize the list to keep track of all messages
 messages = []
@@ -21,7 +21,7 @@ client = AzureOpenAI(
 )
 
 #remember to add the model name of your deployed model
-model = "playwright_ai"
+model = "playwright2_ai"
 temperature=0.7
 max_tokens=800
 top_p=0.95

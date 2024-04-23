@@ -15,6 +15,7 @@ def send_message(new_message):
     )
     response = completion.choices[0].message.content
     cfg.messages.append({"role": "system", "content": response})
+    print(response)
     return response
 
 def generate_playwright_code(prompts):   

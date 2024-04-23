@@ -3,13 +3,7 @@ from config import test_directory, test_cases_definitions_dir
 import yaml
 import os, subprocess
 
-send_message("Act as a code generator for Playwright automation tests. I will ask you to generate specific code parts which will be later combined with a template file. Generate only code without descriptions or explanations.")
-
-# prompts = [
-#     "Open google.com page",
-#     "Confirm cookie policy.",
-#     "Click on a <textarea> and that search for Playwright text"
-# ]
+send_message("Act as a code generator for Playwright automation tests. I will ask you to generate specific code parts which will be later combined with a template file. Generate only code in plain text without descriptions or explanations and without ```.")
 
 
 for filename in os.listdir(test_cases_definitions_dir):
@@ -29,14 +23,5 @@ for filename in os.listdir(test_cases_definitions_dir):
     else:
         continue
 
-
-
-
-
-# generated_test = generate_playwrite_test(prompts)
-
-
-# with open(test_directory + '/test1.spec.js', 'w') as file:
-#     file.write(generated_test)
 
 
