@@ -4,7 +4,7 @@ import config as cfg
 def send_message(new_message):
     cfg.messages.append({"role": "user", "content": new_message})
     completion = cfg.client.chat.completions.create(
-        model="playwright_ai",
+        model=cfg.model,
         messages=cfg.messages,
         temperature=cfg.temperature,
         max_tokens=cfg.max_tokens,

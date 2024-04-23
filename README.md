@@ -1,5 +1,8 @@
 # playwrite_ai
 
+## Prerequisites
+Create environmental variable 'AZURE_OPENAI_KEY' with a token to you model
+
 ## Prepare environment
 npm i -D @playwright/test
 npx playwright install   
