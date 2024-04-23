@@ -3,6 +3,7 @@
 import os
 import subprocess
 from openai import AzureOpenAI
+from generate_testcases import generate_playwrite_test
 
 
 client = AzureOpenAI(
@@ -35,23 +36,20 @@ completion = client.chat.completions.create(
 print(completion.choices[0].message.content)
 
 print('### Generate Tests ###')
-message_text = [{"role":"system","content":"Generate Playwright code which will open google.com confirm cookie policy (text='Zaakceptuj wszystko') than click on a <textarea> and search for Playwright text (in the text area). Make sure to update Test name and test case description accorting to this prompt. Use this code as a test template" + templateContent +  ".Generate only JS code without additional description. Check if search any search result contains 'playwright' string."}]
 
-completion = client.chat.completions.create(
-  model="playwright_ai", # model = "deployment_name"
-  messages = message_text,
-  temperature=0.7,
-  max_tokens=800,
-  top_p=0.95,
-  frequency_penalty=0,
-  presence_penalty=0,
-  stop=None
-)
 
-code = completion.choices[0].message.content
+# Example usage
+prompts = [
+    "Open google.com page",
+    "Confirm cookie policy.(google.com)",
+    "Click on a <textarea> and that search for Playwright text(google.com)"
+]
+
+generated_test = generate_playwrite_test(prompts, client)
+
 
 with open(testDirectory + '/test1.spec.js', 'w') as file:
-    file.write(code)
+    file.write(generated_test)
 
 for filename in os.listdir(testDirectory):
     if filename.endswith(".spec.js"):

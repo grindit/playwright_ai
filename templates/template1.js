@@ -2,12 +2,12 @@
 const { test, expect } = require('@playwright/test');
 
 // Define the test suite
-test.describe('Test name', () => {
+test.describe('<Test Name>', () => {
 
   // Define a test case
-  test('test case description', async ({ page }) => {
+  test('<Test Case Description>', async ({ page }) => {
 
-    //Test content
+    //Insert test code here.
 
   });
 });
