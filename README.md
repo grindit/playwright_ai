@@ -8,7 +8,6 @@ Create environmental variable 'AZURE_OPENAI_KEY' with a token to you model
 ```
 npm i -D @playwright/test
 npx playwright install   
-npx playwright test sampletest1.spec.js
 ```
 
 ```
@@ -37,4 +36,9 @@ Test:
     - "Open google.com page."
     - "Confirm cookie policy."
     - "Click on a <textarea> and that search for Playwright text."
+```
+
+Run a test manually
+```
+npx playwright test sampletest1.spec.js
 ```
