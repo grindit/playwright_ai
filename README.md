@@ -2,7 +2,9 @@
 This is a sample projest to demonstrate how to use Azure OpenAI to generate automated tests with Playwright.
 
 ## Prerequisites
-Create environmental variable 'AZURE_OPENAI_KEY' with a token to you model
+Create environmental variable 'AZURE_OPENAI_KEY' with a token to you model.
+Update model value in the config.py file.
+Update azure_endpoint value in the config.py file.
 
 ## Prepare environment
 ```
@@ -14,6 +16,7 @@ npx playwright install
 pip install pipenv
 pipenv shell   
 pip install openai
+pip install pyyaml
 ```
 
 ## Generate tests
