@@ -1,4 +1,5 @@
 import config as cfg
+import asyncio
 
 # Function to add a new message and get a response
 def send_message(new_message):
@@ -15,7 +16,6 @@ def send_message(new_message):
     )
     response = completion.choices[0].message.content
     cfg.messages.append({"role": "system", "content": response})
-    print(response)
     return response
 
 def generate_playwright_code(prompts):   
@@ -48,3 +48,7 @@ def remove_markdowns(text):
 def update_test_case(test_code, test_name, description):
     test_code = test_code.replace('<Test Name>', test_name).replace('<Test Case Description>', description)
     return test_code
+
+def initialize_conversation_context():
+    for prompt in cfg.init_prompts:
+        print(send_message(prompt))

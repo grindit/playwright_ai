@@ -1,10 +1,10 @@
-from helpers import generate_playwrite_test, send_message, update_test_case, remove_markdowns
-from config import test_directory, test_cases_definitions_dir
+from helpers import generate_playwrite_test, send_message, update_test_case, remove_markdowns,initialize_conversation_context
+from config import test_directory, test_cases_definitions_dir, messages
 import yaml
-import os, subprocess
+import os
 
-send_message("Act as a code generator for Playwright automation tests. I will ask you to generate specific code parts which will be later combined with a template file. Generate only code in plain text without descriptions or explanations and without ```.")
 
+initialize_conversation_context()
 
 for filename in os.listdir(test_cases_definitions_dir):
     if filename.endswith(".test_case.yaml"):
@@ -23,6 +23,3 @@ for filename in os.listdir(test_cases_definitions_dir):
                 file.write(generated_test)
     else:
         continue
-
-
-

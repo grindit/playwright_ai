@@ -1,0 +1,586 @@
+[
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an assistant that helps developers execute specific actions on web pages using Playwright commands."
+            },
+            {
+                "role": "user",
+                "content": "How do I click the first 'All Products' link on the page?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.getByRole('link', \\{ name: 'All Products' \\}).first().click();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I click on an image element named after the product variable?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.getByRole('img', { name: product }).click();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How can I call the function addAndViewCart with page as its argument?"
+            },
+            {
+                "role": "assistant",
+                "content": "await addAndViewCart(page);"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I ensure the product text is visible on the page?"
+            },
+            {
+                "role": "assistant",
+                "content": "await expect(page.getByText(product)).toBeVisible();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I click the first 'Laptops' link on the page?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.getByRole('link', { name: 'Laptops' }).first().click();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I click on the 'Buy Now' button?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.getByRole('button', { name: 'Buy Now' }).click();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I navigate to a specified URL?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.goto('https://cloudtesting.contosotraders.com/');"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I click on the 'Add To Bag' button?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.getByRole('button', { name: 'Add To Bag' }).click();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I check a checkbox?"
+            },
+            {
+                "role": "assistant",
+                "content": "locator.check()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I ensure an element is visible?"
+            },
+            {
+                "role": "assistant",
+                "content": "expect(locator).toBeVisible()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "What command do I use to set a timeout for a single action, like going to a page?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.goto('https://playwright.dev', { timeout: 30000 });"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an assistant that helps developers execute specific actions on web pages using Playwright commands."
+            },
+            {
+                "role": "user",
+                "content": "How do I click on an image element named after the product variable?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.getByRole('img', { name: product }).click();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How can I call the function addAndViewCart with page as its argument?"
+            },
+            {
+                "role": "assistant",
+                "content": "await addAndViewCart(page);"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I ensure the product text is visible on the page?"
+            },
+            {
+                "role": "assistant",
+                "content": "await expect(page.getByText(product)).toBeVisible();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I click on the 'Buy Now' button?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.getByRole('button', { name: 'Buy Now' }).click();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "Can you repeat how to call the function addAndViewCart with page as its argument?"
+            },
+            {
+                "role": "assistant",
+                "content": "await addAndViewCart(page);"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I check if the text for 'Xbox Wireless Controller Lunar Shift Special Edition' is visible on the page?"
+            },
+            {
+                "role": "assistant",
+                "content": "await expect(page.getByText('Xbox Wireless Controller Lunar Shift Special Edition')).toBeVisible();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an assistant that helps developers execute specific actions on web pages using Playwright commands."
+            },
+            {
+                "role": "user",
+                "content": "How do I click on an image element named after the product variable?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.getByRole('img', { name: product }).click();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How can I call the function addAndViewCart with page as its argument?"
+            },
+            {
+                "role": "assistant",
+                "content": "await addAndViewCart(page);"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I ensure the product text is visible on the page?"
+            },
+            {
+                "role": "assistant",
+                "content": "await expect(page.getByText(product)).toBeVisible();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I click on the 'Buy Now' button?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.getByRole('button', { name: 'Buy Now' }).click();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "Can you repeat how to call the function addAndViewCart with page as its argument?"
+            },
+            {
+                "role": "assistant",
+                "content": "await addAndViewCart(page);"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I check if the text for 'Xbox Wireless Controller Lunar Shift Special Edition' is visible on the page?"
+            },
+            {
+                "role": "assistant",
+                "content": "await expect(page.getByText('Xbox Wireless Controller Lunar Shift Special Edition')).toBeVisible();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an assistant that helps developers execute specific actions on web pages using Playwright commands."
+            },
+            {
+                "role": "user",
+                "content": "How do I navigate to a specified URL?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.goto('https://cloudtesting.contosotraders.com/');"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I click on the 'Add To Bag' button?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.getByRole('button', { name: 'Add To Bag' }).click();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I click on the element labeled 'cart'?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.getByLabel('cart').click();"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How can I check if a checkbox is checked?"
+            },
+            {
+                "role": "assistant",
+                "content": "expect(locator).toBeChecked()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I ensure a control is enabled?"
+            },
+            {
+                "role": "assistant",
+                "content": "expect(locator).toBeEnabled()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an assistant that helps developers verify web page elements using Playwright assertions."
+            },
+            {
+                "role": "user",
+                "content": "How can I check if an element contains specific text?"
+            },
+            {
+                "role": "assistant",
+                "content": "expect(locator).toContainText()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I verify if an element has a specific attribute?"
+            },
+            {
+                "role": "assistant",
+                "content": "expect(locator).toHaveAttribute()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "What command should I use to check if a list of elements has a given length?"
+            },
+            {
+                "role": "assistant",
+                "content": "expect(locator).toHaveCount()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How can I check if an element's text matches expected text?"
+            },
+            {
+                "role": "assistant",
+                "content": "expect(locator).toHaveText()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an assistant trained to guide users in verifying and interacting with web elements using Playwright."
+            },
+            {
+                "role": "user",
+                "content": "How can I check if an input element has a specific value?"
+            },
+            {
+                "role": "assistant",
+                "content": "expect(locator).toHaveValue()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I verify that the page has the correct title?"
+            },
+            {
+                "role": "assistant",
+                "content": "expect(page).toHaveTitle()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "What's the command to check if the page URL matches an expected URL?"
+            },
+            {
+                "role": "assistant",
+                "content": "expect(page).toHaveURL()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How can I check a checkbox on the page?"
+            },
+            {
+                "role": "assistant",
+                "content": "locator.check()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "What should I do to click on a specific element?"
+            },
+            {
+                "role": "assistant",
+                "content": "locator.click()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an assistant trained to guide developers in interacting with web elements using Playwright."
+            },
+            {
+                "role": "user",
+                "content": "How can I uncheck an input checkbox?"
+            },
+            {
+                "role": "assistant",
+                "content": "locator.uncheck()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "What command should I use to hover the mouse over an element?"
+            },
+            {
+                "role": "assistant",
+                "content": "locator.hover()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I fill a form field with text?"
+            },
+            {
+                "role": "assistant",
+                "content": "locator.fill()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "What's the method to focus on an element?"
+            },
+            {
+                "role": "assistant",
+                "content": "locator.focus()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How can I simulate pressing a single key?"
+            },
+            {
+                "role": "assistant",
+                "content": "locator.press()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an assistant designed to help developers manipulate and interact with web elements using Playwright."
+            },
+            {
+                "role": "user",
+                "content": "How can I pick files to upload?"
+            },
+            {
+                "role": "assistant",
+                "content": "locator.setInputFiles()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How do I select an option from a dropdown menu?"
+            },
+            {
+                "role": "assistant",
+                "content": "locator.selectOption()"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "How can I set a timeout for navigating to a new page?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.goto('https://playwright.dev', { timeout: 30000 });"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "user",
+                "content": "What about setting a timeout for clicking on a button?"
+            },
+            {
+                "role": "assistant",
+                "content": "await page.getByText('Get Started').click({ timeout: 10000 });"
+            }
+        ]
+    }
+]
