@@ -1,4 +1,4 @@
-from helpers import generate_playwrite_test, send_message
+from helpers import generate_playwrite_test, send_message, update_test_case, remove_markdowns
 from config import test_directory, test_cases_definitions_dir
 import yaml
 import os, subprocess
@@ -16,8 +16,9 @@ for filename in os.listdir(test_cases_definitions_dir):
             steps = test_case['Test']['Steps']
             generated_test = generate_playwrite_test(steps)
             base_filename = filename.replace('.test_case.yaml', '')
-            generated_test = generated_test.replace('<Test Name>', test_name)
-            generated_test = generated_test.replace('<Test Case Description>', description)
+            generated_test = update_test_case(generated_test, test_name, description)
+            generated_test = remove_markdowns(generated_test)
+
             with open(test_directory + '/' + base_filename + '.spec.js', 'w') as file:
                 file.write(generated_test)
     else:

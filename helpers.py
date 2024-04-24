@@ -41,3 +41,10 @@ def generate_playwrite_test(prompts):
     message_text = "Insert" + generated_code_as_string + "into the test template ... " + cfg.template_content
 
     return send_message(message_text)
+
+def remove_markdowns(text):
+    return text.replace("```", "").replace("javascript", "").replace("python", "")
+
+def update_test_case(test_code, test_name, description):
+    test_code = test_code.replace('<Test Name>', test_name).replace('<Test Case Description>', description)
+    return test_code
