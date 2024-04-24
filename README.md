@@ -1,4 +1,4 @@
-# playwrite_ai
+# playwright_ai
 This is a sample projest to demonstrate how to use Azure OpenAI to generate automated tests with Playwright.
 
 ## Prerequisites
