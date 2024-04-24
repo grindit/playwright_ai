@@ -28,3 +28,5 @@ top_p=0.95
 frequency_penalty=0
 presence_penalty=0
 stop=None
+
+initial_context_msg = "Act as a code generator for Playwright automation tests. I will ask you to generate specific code parts which will be later combined with a template file. Generate only code in plain text without descriptions or explanations and without ```."
