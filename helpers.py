@@ -21,11 +21,10 @@ def send_message(new_message):
 def generate_playwright_code(prompts):   
     results = []
     preText = ""
-    postText = ""
-    
+    postText = ""    
     for prompt in prompts:
         try:
-            results.append(send_message(preText + prompt + postText))    
+            results.append(send_message(preText + prompt['Action'] + postText + prompt['Selector']))    
         except Exception as e:
             print(f"Error while generating code for prompt: {prompt}\n{str(e)}")  
     return results
@@ -46,7 +45,7 @@ def remove_markdowns(text):
     return text.replace("```", "").replace("javascript", "").replace("python", "")
 
 def update_test_case(test_code, test_name, description):
-    test_code = test_code.replace('<Test Name>', test_name).replace('<Test Case Description>', description)
+    test_code = test_code.replace('<Test Name>', test_name)
     return test_code
 
 def initialize_conversation_context():

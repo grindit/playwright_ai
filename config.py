@@ -2,7 +2,7 @@ import os
 from openai import AzureOpenAI
 
 # Setup the Azure OpenAI client as a global variable
-azure_endpoint = "https://testservicepoc.openai.azure.com/"
+azure_endpoint = "https://openaidpoc2.openai.azure.com/"
 api_key = os.getenv("AZURE_OPENAI_KEY")
 api_version = "2024-02-15-preview"
 test_directory = "generated_tests"
@@ -21,7 +21,7 @@ client = AzureOpenAI(
 )
 
 #remember to add the model name of your deployed model
-model = "playwright_ai"
+model = "playwright3"
 temperature=0.7
 max_tokens=800
 top_p=0.95

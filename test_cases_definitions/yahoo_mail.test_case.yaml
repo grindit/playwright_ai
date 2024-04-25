@@ -2,7 +2,13 @@ Test:
   Name: "Yaho Mail Test"
   Description: "Tests that checks how to click mail on Yahoo"
   Steps:
-    - "Go to page yahoo.com."
-    - "Confirm cookie policy by pressing button with a text 'Accept All'"
-    - "Click on Mail icon. It has id 'ybarMailLink'."
-    - "Check if page url is 'https://mail.yahoo.com/'."
+    - Action: "Go to 'https://www.yahoo.com'."
+      Selector: ""
+    - Action: "Confirm cookie policy by pressing button."
+      Selector: "button[name='agree']"
+    - Action: "Click on Mail icon.."
+      Selector: "id='ybarMailLink'"
+    - Action: "Check if page url is 'https://mail.yahoo.com/'."
+      Selector: ""
+
+

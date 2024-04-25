@@ -8,6 +8,7 @@ module.exports = {
       use: {
         ...devices['Desktop Chrome'],
         headless: false, // Run in headed mode
+        viewport: { width: 1920, height: 1080 }
       },
     },
   ],
