@@ -5,9 +5,20 @@ test('Gooogle detailes search test', async ({ page }) => {
   await page.click('button#L2AGLb');
   await page.click('textarea[name="q"]');
   await page.fill('textarea[name="q"]', 'playwright');
-  await page.click('input[name="btnK"]');
-  await page.waitForSelector('id=result-stats');
-  const results = await page.$$('text=playwright');
-  expect(results.length).toBeGreaterThan(0);
-  await page.screenshot({ path: 'search_results.png' });
+  await page.waitForSelector('input[name="btnK"]');
+  await page.press('input[name="btnK"]', 'Enter');
+  await page.waitForSelector('div#result-stats');
+  const searchResults = await page.$$('div[data-async-context]');
+
+  let containsPlaywright = false;
+  for (const result of searchResults) {
+    const text = await result.textContent();
+    if (text.includes('playwright')) {
+      containsPlaywright = true;
+      break;
+    }
+  }
+
+  expect(containsPlaywright).toBeTruthy();
+  await page.screenshot({ path: 'screenshot.png' });
 });
