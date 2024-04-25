@@ -10,5 +10,6 @@ Test:
       Selector: "id='ybarMailLink'"
     - Action: "Check if page url is 'https://mail.yahoo.com/'."
       Selector: ""
-
+    - Action: "Capture a screenshot of the search results page for verification."
+      Selector: ""
 

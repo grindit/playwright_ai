@@ -1,4 +1,4 @@
-from helpers import generate_playwrite_test, send_message, update_test_case, remove_markdowns,initialize_conversation_context
+from helpers import generate_playwrite_test, update_test_case, remove_markdowns,initialize_conversation_context
 from config import test_directory, test_cases_definitions_dir, messages
 import yaml
 import os

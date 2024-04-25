@@ -37,9 +37,9 @@ def generate_playwrite_test(prompts):
     for code in generated_code:
         print(code)
 
-    message_text = "Insert" + generated_code_as_string + "into the test template ... " + cfg.template_content
-
-    return send_message(message_text)
+    output = cfg.template_content.replace("// Insert code here", generated_code_as_string)
+    
+    return output
 
 def remove_markdowns(text):
     return text.replace("```", "").replace("javascript", "").replace("python", "")
