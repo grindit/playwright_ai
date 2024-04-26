@@ -41,6 +41,11 @@ def generate_playwrite_test(prompts):
     
     return output
 
+def autogenerate_playwrite_test(results):
+
+    output = cfg.template_content.replace("// Insert code here", results)
+    return output
+
 def remove_markdowns(text):
     return text.replace("```", "").replace("javascript", "").replace("python", "")
 
